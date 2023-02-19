@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 12</title>
+</head>
+<script>
+    let x;
+    function unvalidation(){
+        var regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //for email-id
+        var uname=document.getElementById("uname").value;
+        if(uname.length!=0)
+        {
+            if(uname.match(regex)){
+                document.getElementById("pid").innerHTML="";
+            }
+            else{
+                document.getElementById("pid").innerHTML="Email id must be entered like [example12@mail.com]";
+            }
+        }
+        else{
+            alert("Enter email-id");
+        }
+    }
+    function pwdvalidation(){
+        var regex=/^[A-Za-z]\w{7,14}$/; //To check a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter
+        var uname=document.getElementById("pwd").value;
+        if(uname.length!=0)
+        {
+            if(x = uname.match(regex)){
+                document.getElementById("pwdid").innerHTML="";
+            }
+            else{
+                document.getElementById("pwdid").innerHTML="Password must be of 6 to 20 characters which contains at least one numeric digit, one uppercase and one lowercase letter";
+            }
+            return x;
+        }
+        else{
+            alert("Enter Password");
+        }
+    }
+    function cpwd(){
+        var val=document.getElementById("cnfpwd").value;
+        if(x==val){
+
+        }
+        else{
+            document.getElementById("ppid").innerHTML="Password not matched";
+        }
+    }
+</script>
+<body>
+    <center>
+        <h3 style.background="red">Registration Form</h3>
+        <form>
+            Email id : <input type="text" id="uname" onblur="unvalidation()">
+            <br>
+            <br>
+            Password : <input type="password" id="pwd" onblur="pwdvalidation()">
+            <br>
+            <br>
+            Confirm Password : <input type="password" id="cnfpwd" onblur="cpwd()">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </center>
+    <p id="pid"></p>
+    <p id="pwdid"></p>
+    <p id="ppid"></p>
+</body>
+</html>

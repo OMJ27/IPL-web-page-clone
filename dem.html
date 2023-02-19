@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function encod(){
+        var str=document.getElementById("eco").value;
+        document.getElementById("sett").innerHTML=window.btoa(str);
+    }
+    function prom(){
+        var x=prompt("Enter value :");
+    }
+    let cre;
+    function cret(){
+        var hei=document.getElementById("hei").value;
+        var wid=document.getElementById("wid").value;
+        height=hei;
+        width=wid;
+        cre=window.open("","","width,height");
+    }
+    function mov(){
+        var hei=document.getElementById("hei").value;
+        var wid=document.getElementById("wid").value;
+         x=hei;
+         y=wid;
+        cre=window.moveTo(x,y);
+    }
+    function resi(){
+        var hei=document.getElementById("hei").value;
+        var wid=document.getElementById("wid").value;
+         x=hei;
+         y=wid;
+        cre =window.resizeTo(x,y);
+    }
+</script>
+<body>
+        height :  <input type="text" id="hei">
+        <br>
+        width :  <input type="text" id="wid">
+        <h1 id="hid"></h1>
+       <!--<input type="button" onclick="window.open('http://127.0.0.1:5500/clock.html')" value="Digital clock"> --> 
+       <input type="button" onclick="cret()" value="Create window">
+       <br>
+       <input type="button" onclick="mov()" value="Move window">
+        <br>
+       <input type="button" onclick="resi()" value="Resize window"> 
+</body>
+</html>

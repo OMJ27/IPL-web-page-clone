@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<htm lang = "en"l>
+<head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
+        <title>Document</title>
+        <link rel = "stylesheet" href = "ipl.css">
+</head>
+<body>
+        <div class  = "container">
+            <div class = "logo">
+                <img src ="Images/ipllogo.png" alt=""> 
+            </div>
+
+            <!--this is for background logo-->
+            <div class = "background">
+                <img src = "Images/rcblogo.png" id = "logobg" alt = "">
+            </div>
+
+            <div class = "heading">
+                <h1 id = "head">
+                    Royal Challengers Bangalore 
+                </h1>
+                <p>
+                    Royal Challengers Bangalore (often abbreviated as RCB) are a franchise cricket team based in Bangalore, Karnataka, that plays in the Indian Premier League (IPL). 
+                    It was founded in 2008 by United Spirits and named after the company's liquor brand Royal Challenge.
+                </p>
+                <button>WATCH NOW</button>
+            </div>
+
+            <!--this is for main page-->
+            <div class="image">
+                <img id="myimage" src="Images/rcb.png" alt="">
+
+            </div>
+
+            <!--Navigation bar-->
+            
+            <div class="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li>Team</li>
+                    <li>Performance</li>
+                    <li>Rank</li>
+                </ul>
+            </div>
+            
+            <!--html code is done-->
+         <!--   <div class="csking">
+            
+           </div> -->
+            <!--This is for other teams-->
+            <div class="list">
+                <ol>
+                    <li onclick =  "myfun('Images/css3.png' , '#FFD700' , 'Chennai Super Kings' , 'Images/csk3.png')">CSK</li>
+                    <li onclick =  "myfun('Images/csk.png' , 'gold' , 'Chennai Super Kings' , 'Images/csk3.png')">MI</li>
+                    <li>KKR</li>
+                    <li>GT</li>
+                    <li>LSG</li>                  
+               </ol>
+            </div>
+            <div class="empty">
+            </div>
+        </div>
+        <script>
+            function myfun(image , colour , head , logo)
+            {
+                  document.getElementById('myimage').src = image;
+                  document.querySelector('.empty').style.backgroundcColor = colour;
+                  dociment.getElementById('head').innerHTML = head;
+                  document.getElementById('logobg').src = logo;
+                  document.querySelector('button').style.backgroundcColor = colour;
+            }
+        </script>
+</body>
+</html>

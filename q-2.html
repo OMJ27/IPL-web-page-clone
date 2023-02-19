@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 12</title>
+</head>
+<script>
+    function check(){
+        var patt=/[aeiou]/ig;
+        var txt=document.getElementById("str").value;
+        alert("Vowels : " + txt.match(patt));
+    }
+</script>
+<body>
+    Enter a string : <input type="text" id="str">
+    <br>
+    <br>
+    <button onclick="check()">CHECK</button>
+</body>
+</html>
